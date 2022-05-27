@@ -1,0 +1,36 @@
+You have been tasked with creating a service that stores information of a vehicle order.
+We deal with thousands of vehicle orders a day and predominantly have spikes in traffic in the morning
+and in the evening. Orders are short lived and do not need to be kept for longer than 3 days.
+
+We need an API and datastore that will allow us to do the following:
+1.Create an order returning an order uuid.
+2.Update an order with a vehicle manufacturer, model and total price.
+3.View an order with all its details.
+
+Packages:
+uuid: https://www.npmjs.com/package/uuid
+express: https://www.npmjs.com/package/express
+method-override: https://www.npmjs.com/package/method-override
+mongoose: https://www.npmjs.com/package/mongoose
+ejs: https://www.npmjs.com/package/ejs
+
+Steps:
+Defined a Schema for the data, made sure that all information inputted in required so that the database
+functions properly.
+Create a mongoose database to store data. Add try/catch to find error when connecting.
+Connect to a directory with the ejs files.
+Use methodOveride to allow my program to have CRUD functionality.
+Create seed to create fake data to test whether the CRUD functionality works.
+Displaying all orders with its details in the main home directory.
+
+Minor Setbacks:
+Attempted to use uuid to find the data and update but could not find the uuid in the params.body. So I used
+the built-in ID that MongoDB has provided.
+Attempted to use my own date key which did not work as I could not modify it when updating. Therefore I found an
+alternative solution which was to enable timestamps in my Schema which had two built in properties: createdAt and
+updatedAt. This is extremely useful as we can easily find data that are kept longer than 3 days.
+
+Major Setbacks:
+At the start of the project my goal was to attempt this task using TypeScript as I had used it in my recent projects.
+Unfortunately, I was having trouble with the syntax and did not know if I could within the deadline so I switched to
+JavaScript.

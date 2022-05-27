@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Car</title>
+</head>
+<body>
+    <h1>Update a Car</h1>
+    <form action="/<%= car._id %>?_method=PUT" method="post">
+      <div>
+        <label for="model">Car Model:</label>
+        <input type="text" name="model" id="model" value=<%= car.model %> />
+      </div>
+      <div>
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" name="manufacturer" id="manufacturer" value=<%= car.manufacturer %> />
+      </div>
+      <div>
+        <label for="price">Price: £</label>
+        <input type="text" name="price" id="price" value=<%= car.price.toFixed(2) %> />
+      </div>
+      <button>Submit</button>
+    </form>
+</body>
+</html>
